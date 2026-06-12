@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabio Rodrigues | Credentials & Projects</title>
+    <title>Fabio Rodrigues | Certifications</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
@@ -99,7 +99,7 @@
         }
 
         .cert-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; }
-        .cert-card h3 { font-size: 1rem; color: var(--white); margin-bottom: 20px; line-height: 1.4; text-transform: uppercase; min-height: 3em; display: flex; align-items: center; justify-content: center; }
+        .cert-card h3 { font-size: 1rem; color: var(--white); margin-bottom: 20px; line-height: 1.4; text-transform: uppercase; min-height: 3em; display: flex; align-items: center; }
 
         .view-btn {
             display: inline-block;
@@ -151,7 +151,7 @@
 <div class="container">
     <header>
         <h1 class="hero-title">FABIO <span>RODRIGUES</span></h1>
-        <p class="hero-subtitle">Logistics & Technical Credentials</p>
+        <p class="hero-subtitle">Logistics Professional Credentials</p>
         <div class="contact-links">
             <a href="mailto:fabio.rodrigues.contact@gmail.com"><i class="fas fa-envelope"></i> Email</a>
             <a href="https://www.linkedin.com/in/fabiorenansr/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -171,12 +171,6 @@
 
 <script>
     const certs = [
-        { 
-            name: "Automation: Municipal Transit Kiosk", 
-            file: "WhatsApp Image 2026-06-12 at 12.44.32 PM.jpeg",
-            isProject: true,
-            desc: "Designed and deployed an accessible, low-cost self-service hardware/software kiosk to streamline citizen routing. Engineered using upcycled components and a custom AutoHotkey script that processes mechanical numeric inputs to dispatch automated network alerts via CLI (CMD) to targeted operator workstations grouped by hostname. Eliminated service bottlenecks and achieved formal commendation from municipal authorities."
-        },
         { name: "Ontario Supervisor Training", file: "Ontario_Supervisor_Training_Certification_FABIO_RENAN_SIMPLICIO_RODRIGUES.pdf" },
         { name: "WHMIS 2015", file: "WHMIS_Certification_FABIO_RENAN_SIMPLICIO_RODRIGUES.pdf" },
         { name: "Forklift License", file: "Forklift_License_FABIO_RENAN_SIMPLICIO_RODRIGUES.pdf" },
@@ -198,10 +192,9 @@
         const card = document.createElement('div');
         card.className = 'cert-card';
         card.innerHTML = `
-            <i class="${cert.isProject ? 'fa-solid fa-microchip' : 'fa-solid fa-medal'}"></i>
+            <i class="fa-solid fa-medal"></i>
             <h3>${cert.name}</h3>
-            ${cert.desc ? `<p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 20px; line-height: 1.5; text-align: justify; width: 100%;">${cert.desc}</p>` : ''}
-            <a href="${cert.file}" target="_blank" class="view-btn">${cert.isProject ? 'View Project' : 'View Document'}</a>
+            <a href="${cert.file}" target="_blank" class="view-btn">View Document</a>
         `;
         container.appendChild(card);
     });
